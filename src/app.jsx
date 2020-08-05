@@ -10,10 +10,7 @@ import Home from "./pages/home";
 import Detail from "./pages/detail/loadable";
 import Login from "./pages/login";
 import Register from "./pages/register";
-import Recommend1 from "./pages/recommends/recommend1";
-import Recommend2 from "./pages/recommends/recommend2";
-import Recommend3 from "./pages/recommends/recommend3";
-import Recommend4 from "./pages/recommends/recommend4";
+import Footer from "./common/footer";
 
 export default class App extends Component {
   render() {
@@ -24,14 +21,11 @@ export default class App extends Component {
         <BrowserRouter>
           <div>
             <Header/>
-            <Route path='/' exact component={Home}></Route>
-            <Route path='/detail' exact component={Detail}></Route>
-            <Route path='/login' exact component={Login}></Route>
-            <Route path='/register' exact component={Register}></Route>
-            <Route path='/recommend1' exact component={Recommend1}></Route>
-            <Route path='/recommend2' exact component={Recommend2}></Route>
-            <Route path='/recommend3' exact component={Recommend3}></Route>
-            <Route path='/recommend4' exact component={Recommend4}></Route>
+            <Route path='/' exact component={Home}/>
+            <Route path='/detail' exact component={Detail}/>
+            <Route path='/login' exact component={Login}/>
+            <Route path='/register' exact component={Register}/>
+            <Footer/>
           </div>
         </BrowserRouter>
       </Provider>

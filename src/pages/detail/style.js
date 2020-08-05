@@ -13,6 +13,8 @@ export const Header=styled.div`
   font-size:34px;
   color:#333;
   font-weight:700;
+  padding-bottom:10px;
+  border-bottom:1px solid #000;
 `;
 export const Content =styled.div`
   color:#2f2f2f;

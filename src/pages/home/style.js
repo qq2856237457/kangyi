@@ -101,21 +101,32 @@ export const RecommendItem = styled.div`
   padding-left:35px;
   font-size:20px;
   cursor:pointer;
+  
   &.img1{
     background-image:url(${img1});
-    color:#fffefc;
+    a{
+      color:#fffefc;
+    }
+    
   }
   &.img2{
     background-image:url(${img2});
-    color:#bf903b;
+    a{
+      color:#bf903b;
+    }
   }
   &.img3{
     background-image:url(${img3});
-    color:#569189;
+    a{
+      color:#569189;
+    }
   }
   &.img4{
     background-image:url(${img4});
-    color:#4986a8;
+    a{
+      color:#4986a8;
+    }
+    
   }
 `;
 

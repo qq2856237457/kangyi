@@ -3,12 +3,13 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import CSSTransition from "react-transition-group/cjs/CSSTransition";
 
-import {Modal, Button, Space, Popover} from 'antd';
+import {Modal, Button, Popover} from 'antd';
 import {ExclamationCircleOutlined} from '@ant-design/icons';
 
 import 'antd/dist/antd.css';
 import * as actionCreator from './store/actionCreator';
 import * as loginActionCreator from '../../pages/login/store/actionCreator';
+import {changeGetMore} from '../../pages/home/store/actionCreator'
 import icon from '../../static/icon/icon.png';
 import erweima from '../../static/icon/二维码.jpg'
 import {
@@ -46,7 +47,7 @@ class Header extends Component {
           onMouseLeave={handleMouseLeave}
         >
           <SearchTitle>
-            热门搜索
+            疫情关键词
             <SearchSwitch onClick={() => changePage(page, totalPage, this.spinIcon)}>
               <span ref={(icon) => {
                 this.spinIcon = icon
@@ -70,7 +71,7 @@ class Header extends Component {
     const content = (
       <img src={erweima} style={{width: "120px", height: "120px", margin: "0 50px"}} alt=""/>
     );
-    const {focus, handleInputFocus, handleInputBlur, list, login, logout} = this.props;
+    const {focus, handleInputFocus, handleInputBlur, list, login, logout, stopPage} = this.props;
     return (
       <HeaderWrapper>
         <Logo>
@@ -101,7 +102,7 @@ class Header extends Component {
           </SearchWrapper>
           {
             login ? <NavItem className='right' onClick={logout}>退出</NavItem> :
-              <Link to={'/login'}><NavItem className='right'>登录</NavItem></Link>
+              <Link to={'/login'} onClick={stopPage}><NavItem className='right'>登录</NavItem></Link>
           }
 
           <NavItem className='right'>
@@ -110,8 +111,8 @@ class Header extends Component {
 
         </Nav>
         <Addition>
-          <Button1 className='writing'><span className="iconfont">&#xe708;</span>写文章</Button1>
-          <Link to={'/register'}><Button1 className='reg'>注册</Button1></Link>
+          <Button1 className='writing'><span className="iconfont">&#xe708;</span>中国加油</Button1>
+          <Link to={'/register'} onClick={stopPage}><Button1 className='reg'>注册</Button1></Link>
         </Addition>
       </HeaderWrapper>
     )
@@ -161,8 +162,12 @@ const mapDispatchToProps = (dispatch) => {
         dispatch(actionCreator.changePage(1));
       }
     },
+    stopPage() {
+      dispatch(changeGetMore());
+    },
     logout() {
       const {confirm} = Modal;
+
       function showConfirm() {
         confirm({
           title: '你确定要退出吗?',
@@ -170,15 +175,18 @@ const mapDispatchToProps = (dispatch) => {
           content: '',
           onOk() {
             dispatch(loginActionCreator.logout());
+
           },
           onCancel() {
             console.log('Cancel');
           },
         });
       }
-      showConfirm();
-    }
-  }
 
+      showConfirm();
+
+    },
+
+  }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Header)

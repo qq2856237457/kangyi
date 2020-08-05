@@ -48,7 +48,7 @@ const mapDispatch = (dispatch) => ({
     }
   },
   stopPage(){
-    dispatch(actionCreator.changePage());
+    dispatch(actionCreator.changeGetMore());
   }
 });
 export default connect(mapState, mapDispatch)(List)

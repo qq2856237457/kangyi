@@ -30,7 +30,7 @@ export const addMoreList = (page) => {
     })
   }
 };
-export const changePage = () => {
+export const changeGetMore = () => {
   return (dispatch)=>{
     const action={
       type:constants.CHANGE_PAGE,
