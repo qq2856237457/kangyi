@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "data": {
+    "topList": [
+      {
+        "id": 1,
+        "title": "武汉疫情",
+        "url":"https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner&city=%E6%B9%96%E5%8C%97-%E6%AD%A6%E6%B1%89"
+      },
+      {
+        "id": 2,
+        "title": "北京疫情",
+        "url": "https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner&city=%E5%8C%97%E4%BA%AC-%E5%8C%97%E4%BA%AC"
+      },
+      {
+        "id": 3,
+        "title": "辽宁疫情",
+        "url": "https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner&city=%E9%BB%91%E9%BE%99%E6%B1%9F-%E9%BB%91%E9%BE%99%E6%B1%9F"
+      },
+      {
+        "id": 4,
+        "title": "四川疫情",
+        "url": "https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner&city=%E5%9B%9B%E5%B7%9D-%E5%9B%9B%E5%B7%9D"
+      },
+      {
+        "id": 5,
+        "title": "新疆疫情",
+        "url": "https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner&city=%E6%96%B0%E7%96%86-%E6%96%B0%E7%96%86"
+      }
+    ],
+    "articleList": [
+      {
+        "id": 1,
+        "title": "安徽蒙城：暖心惊喜！出院患者手绘漫画感谢医护人员",
+        "desc": "“战”疫面前，有时一幅画，便胜过千言万语。一位安徽蒙城确诊患者出院后，画了两幅可爱的卡通漫画，送给了一直悉心照顾他的护士张梅。",
+        "imageURL": "http://images.wenming.cn/web_wenming/zgwmw_ysp/ysp_zhb/ky/sh/202003/W020200324383474726975.jpg"
+      },
+      {
+        "id": 2,
+        "title": "河南南阳未成年人以画传“话” 致敬“疫”线工作者",
+        "desc": "运送援助物资的车辆、居家战“疫”的小细节、冲锋一线的逆行者……无论哪一种画面，都让人心有所悟。",
+        "imageURL": "http://images.wenming.cn/web_wenming/dfcz/hn/202003/W020200326325966081633.jpg"
+      },
+      {
+        "id": 3,
+        "title": "湖北宜昌：书画传情笔墨有爱 他们用艺术助力战“疫”",
+        "desc": "书画传情，笔墨有爱！在新冠肺炎疫情防控期间，湖北省宜昌市伍家岗区的教师们除了每天为学生上好网课外，还心系一线，不减战“疫”热情，默默拿起手中的笔，当一名文化志愿者，以笔为援、以墨传情、以艺暖心",
+        "imageURL": "http://images.wenming.cn/web_wenming/dfcz/hb_1679/202003/W020200322364026686583.jpg"
+      },
+      {
+        "id":4,
+        "title":"上海徐汇：\"童\"心协力众志成城 童谣童言童画助力抗疫",
+        "desc":"康健学子们居家抗“疫”，学习生活也能如此丰富多彩……心系疫情、心忧武汉，以笔为“矛”、以语作“盾”，尽己所能，为抗击疫情贡献出自己的一份力量，寄托在了每一首童谣、每一幅童画、每一声祝福之中。",
+        "imageURL":"http://images.wenming.cn/web_wenming/dfcz/sh/202003/W020200316550334848328.jpg"
+      }
+    ]
+  }
+}
