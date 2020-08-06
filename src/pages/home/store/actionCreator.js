@@ -6,11 +6,11 @@ export const getHomeData = () => {
   return (dispatch) => {
     axios.get('./api/home.json').then((res) => {
       const result = res.data.data;
-
       const action = {
         type: constants.GET_DATA,
         topList: result.topList,
         articleList: result.articleList,
+        hero:result.hero
       };
       dispatch(action);
     })

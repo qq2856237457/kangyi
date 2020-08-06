@@ -19,7 +19,7 @@ export default class Recommend extends PureComponent {
             <a href="https://www.sohu.com/a/371480039_120503217" target="_blank">防疫知识 ></a>
           </RecommendItem>
           <RecommendItem className='img4 '>
-            <a href="https://www.sohu.com/a/369279370_120066715?_f=v2-index-feeds" target="_blank">抗议指南 ></a>
+            <a href="https://www.sohu.com/a/369279370_120066715?_f=v2-index-feeds" target="_blank">抗疫指南 ></a>
             </RecommendItem>
 
       </RecommendWrapper>

@@ -11,6 +11,7 @@ import Detail from "./pages/detail/loadable";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Footer from "./common/footer";
+import Story from "./pages/story";
 
 export default class App extends Component {
   render() {
@@ -25,6 +26,7 @@ export default class App extends Component {
             <Route path='/detail' exact component={Detail}/>
             <Route path='/login' exact component={Login}/>
             <Route path='/register' exact component={Register}/>
+            <Route path='/story' exact component={Story}></Route>
             <Footer/>
           </div>
         </BrowserRouter>

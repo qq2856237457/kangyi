@@ -5,8 +5,8 @@ const defaultState = fromJS({
   topList: [],
   articleList: [],
   articlePage: 1,
-  getMore: false
-
+  getMore: false,
+  hero:[]
 });
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -14,6 +14,7 @@ export default (state = defaultState, action) => {
       return state.merge({
         'topList': fromJS(action.topList),
         'articleList': fromJS(action.articleList),
+        'hero':fromJS(action.hero)
       });
     case constants.ADD_DATA:
       return state.merge({

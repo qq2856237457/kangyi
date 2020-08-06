@@ -1,0 +1,1 @@
+export const GET_HERO='get_hero';
