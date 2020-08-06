@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import {connect} from "react-redux"
-import {BackTop,Tooltip} from 'antd';
+import {BackTop, Tooltip} from 'antd';
 import 'antd/dist/antd.css';
 
 
@@ -45,24 +45,22 @@ class Home extends PureComponent {
       fontSize: 14,
     };
     return (
-      <div>
-        <HomeWrapper>
-          <HomeLeft>
-            <img className='banner-img' src={topBanner} alt=''/>
-            <Topic></Topic>
-            <List></List>
-          </HomeLeft>
-          <HomeRight>
-            <Recommend></Recommend>
-            <Writer></Writer>
-          </HomeRight>
-          <BackTop onClick={this.handleScrollTop} visibilityHeight={100}>
-            <Tooltip placement="top" title={'返回顶部'} >
-              <div style={style}>UP</div>
-            </Tooltip>
-          </BackTop>
-        </HomeWrapper>
-      </div>
+      <HomeWrapper className="clearfix">
+        <HomeLeft>
+          <img className='banner-img' src={topBanner} alt=''/>
+          <Topic></Topic>
+          <List></List>
+        </HomeLeft>
+        <HomeRight>
+          <Recommend></Recommend>
+          <Writer></Writer>
+        </HomeRight>
+        <BackTop onClick={this.handleScrollTop} visibilityHeight={100}>
+          <Tooltip placement="top" title={'返回顶部'}>
+            <div style={style}>UP</div>
+          </Tooltip>
+        </BackTop>
+      </HomeWrapper>
     )
   }
 }

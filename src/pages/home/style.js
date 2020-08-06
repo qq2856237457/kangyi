@@ -6,7 +6,18 @@ import img3 from '../../static/images/recommend3.png'
 import img4 from '../../static/images/recommend4.png'
 
 export const HomeWrapper = styled.div`
-  overflow:hidden;
+ &.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+
+  &.clearfix{
+  zoom:1;
+  }
   width:960px;
   margin:0 auto;
 `;

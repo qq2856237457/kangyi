@@ -73,7 +73,7 @@ class Header extends Component {
     );
     const {focus, handleInputFocus, handleInputBlur, list, login, logout, stopPage} = this.props;
     return (
-      <HeaderWrapper>
+      <HeaderWrapper className="clearfix">
         <Logo>
           <img src={icon} alt=""/>
           <h1>抗疫专题网站</h1>

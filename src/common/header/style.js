@@ -4,6 +4,18 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
     height:56px;
+    &.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+    }
+
+    &.clearfix{
+    zoom:1;
+    }
     border-bottom:1px solid #f0f0f0;
 `;
 export const Logo = styled.div`
