@@ -61,7 +61,6 @@ class Home extends PureComponent {
               <div style={style}>UP</div>
             </Tooltip>
           </BackTop>
-
         </HomeWrapper>
       </div>
     )
