@@ -1,0 +1,9 @@
+.heroList .link a{
+    color: #555;
+    display: block;
+    line-height: 2;
+}
+.heroList .link a:hover{
+    color: rgb(53, 97, 255);
+    text-decoration:underline;
+}

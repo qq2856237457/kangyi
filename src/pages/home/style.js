@@ -142,19 +142,15 @@ export const RecommendItem = styled.div`
 `;
 
 export const WriterWrapper = styled.div`
-  
   width:278px;
-  
   border:1px solid #dcdcdc;
   border-radius:3px;
-  
   text-align:center;
-  
   &.fixed{
   position: fixed;
   top: 0;
+  }
   
-}
 `;
 export const LoadMore = styled.div`
   width:100%;

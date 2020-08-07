@@ -5,10 +5,13 @@ import {Link} from "react-router-dom";
 import {connect} from "react-redux"
 
 import {WriterWrapper} from "../style";
+import "./Link.css";
+import * as actionCreator from "../store/actionCreator"
 
 class Writer extends PureComponent {
   state = {
-    needFixed: false
+    needFixed: false,
+
   };
 
   componentDidMount() {
@@ -24,24 +27,32 @@ class Writer extends PureComponent {
     }
   }
 
-  render() {
-    const {list} = this.props;
+  handleMouseEnter = (style) => {
+    style.color = "red"
 
+  };
+
+  render() {
+
+    const {list, stopPage} = this.props;
     return (
       <div id='fixed-menu'>
         <WriterWrapper className={this.state.needFixed ? 'fixed' : ''}>
           <Card size="small" title="抗疫英雄故事>>"
                 bordered={true}
-                extra={<a href="https://www.xuexila.com/yc/c343402.html" target='_blank'>更多</a>} style={{width: 276}}>
-            <div>
+                extra={<a style={{color: "#3561FF"}} href="https://www.xuexila.com/yc/c343402.html" target='_blank'>更多</a>}
+                >
+            <div className={"heroList"}>
               {
                 list.map((item, index) => {
-                  return <Link key={index} to={'/story?id=' + item.get("id")}
-                               style={{color: "#555", display: "block"}}>{item.get("name")}</Link>
+                  return (
+                    <Link key={index} to={'/story?id=' + item.get("id")} className={"link"} onClick={stopPage}>
+                      <a href="javascript:void(0)">{item.get("name")}</a>
+                    </Link>
+                  )
                 })
               }
             </div>
-
           </Card>
         </WriterWrapper>
       </div>
@@ -52,8 +63,10 @@ class Writer extends PureComponent {
 const mapState = (state) => ({
   list: state.getIn(["home", "hero"])
 });
-const mapDispatch = (dispatch) => {
-
-};
+const mapDispatch = (dispatch) => ({
+  stopPage() {
+    dispatch(actionCreator.changeGetMore());
+  }
+});
 
 export default connect(mapState, mapDispatch)(Writer)

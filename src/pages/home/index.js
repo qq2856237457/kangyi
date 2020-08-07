@@ -70,5 +70,6 @@ const mapDispatch = (dispatch) => ({
   changeHomeData() {
     dispatch(actionCreator.getHomeData())
   }
+  
 });
 export default connect(null, mapDispatch)(Home)
