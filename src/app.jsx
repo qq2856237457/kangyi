@@ -14,6 +14,9 @@ import Footer from "./common/footer";
 import Story from "./pages/story";
 
 export default class App extends Component {
+  /*
+  * 本项目使用的路由
+  * */
   render() {
     return (
       <Provider store={store}>

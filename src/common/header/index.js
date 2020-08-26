@@ -30,17 +30,22 @@ import {
 
 
 class Header extends Component {
-
+/*
+* Header组件
+* */
   getList = () => {
+    // 疫情关键词搜索
     const {focus, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, changePage} = this.props;
-    const newList = list.toJS();
-    const pageList = [];
+    const newList = list.toJS();// 从后台获取到的数据，immutable类型转为js类型
+    const pageList = [];//所有数据分页，十个为一页
     if (newList.length) {
       for (let i = (page - 1) * 10; i < page * 10; i++) {
         pageList.push(<SearchItem key={newList[i]}>{newList[i]}</SearchItem>)
       }
     }
     if (focus || mouseIn) {
+      //判断鼠标是否进入或获取焦点
+      // true显示，false不显示
       return (
         <SearchInfo
           onMouseEnter={handleMouseEnter}
@@ -68,6 +73,9 @@ class Header extends Component {
   };
 
   render() {
+    /*
+    * 整个Header组件的布局
+    * */
     const content = (
       <img src={erweima} style={{width: "120px", height: "120px", margin: "0 50px"}} alt=""/>
     );

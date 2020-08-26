@@ -1,15 +1,17 @@
 import React, {PureComponent} from "react";
 import {connect} from "react-redux";
-import {Redirect,Link} from "react-router-dom";
-import { Form, Input, Button, Checkbox,message } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import {Redirect, Link} from "react-router-dom";
+import {Form, Input, Button, Checkbox, message} from 'antd';
+import {UserOutlined, LockOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css';
 
 import {LoginWrapper, LoginBox,} from "./style";
 import * as actionCreator from './store/actionCreator'
 
 class Login extends PureComponent {
-
+/*
+* 登录路由
+* */
   render() {
     const onFinish = values => {
       message.info('登录成功！');
@@ -23,21 +25,31 @@ class Login extends PureComponent {
             <Form
               name="normal_login"
               className="login-form"
-              initialValues={{ remember: true }}
+              initialValues={{remember: true}}
               onFinish={onFinish}
             >
               <Form.Item
                 name="username"
-                rules={[{ required: true, message: '请输入账号' }]}
+                rules={[
+                  {required: true, whitespace: true, message: '请输入用户名'},
+                  {min: 4, message: '用户名至少要有4位'},
+                  {max: 12, message: '用户名最多不超过12位'},
+                  {pattern: /^[a-zA-Z0-9_]+$/, message: '用户名必须是英文、数字或下划线组成'}
+                ]}
               >
-                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="账号" />
+                <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="账号"/>
               </Form.Item>
               <Form.Item
                 name="password"
-                rules={[{ required: true, message: '请输入密码' }]}
+                rules={[
+                  {required: true, whitespace: true, message: '请输入密码'},
+                  {min: 4, message: '密码至少要有4位'},
+                  {max: 12, message: '密码最多不超过12位'},
+                  {pattern: /^[a-zA-Z0-9_]+$/, message: '密码必须是英文、数字或下划线组成'}
+                ]}
               >
                 <Input
-                  prefix={<LockOutlined className="site-form-item-icon" />}
+                  prefix={<LockOutlined className="site-form-item-icon"/>}
                   type="password"
                   placeholder="密码"
                 />

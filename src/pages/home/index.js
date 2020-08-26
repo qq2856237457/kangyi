@@ -9,7 +9,7 @@ import Recommend from "./commmon/recommend";
 import Writer from "./commmon/writer";
 import Topic from "./commmon/topic";
 import * as actionCreator from "./store/actionCreator"
-import topBanner from '../../static/images/topbanner.jpg';
+import topBanner from '../../static/images/topbanner1.jpg';
 
 
 import {

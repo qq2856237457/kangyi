@@ -5,6 +5,10 @@ import * as actionCreator from './store/actionCreator'
 import "./style.css"
 
 class Story extends PureComponent {
+  /*
+  * 抗疫英雄故事组件
+  *
+  * */
   componentDidMount() {
     this.props.getStoryData(this.props.location.search.replace(/[^0-9]/ig, ""))
   }

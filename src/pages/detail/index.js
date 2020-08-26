@@ -7,10 +7,11 @@ import {DetailWrapper, Header, Content} from './style';
 
 
 class Detail extends PureComponent {
+  // 详情页组件
+  // 从参数传递过来的id，进行正则匹配，由此id来确定详情页的内容
   componentDidMount() {
     this.props.getDetailData(this.props.location.search.replace(/[^0-9]/ig, ""))
   }
-
   render() {
     return (
       <DetailWrapper>

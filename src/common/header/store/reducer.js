@@ -9,6 +9,10 @@ const defaultState = fromJS({
   totalPage: 1
 });
 export default (state = defaultState, action) => {
+  /*
+  * 从后台取得的数据，根据派发的action.type，存储到组件的state中
+  *
+  * */
   switch (action.type) {
     case constants.SEARCH_FOCUS:
       return state.set('focus', true);

@@ -3,6 +3,10 @@ import axios from 'axios';
 import {fromJS} from "immutable";
 
 export const getHomeData = () => {
+  /*
+  * 获取首页基本数据，派发action
+  *
+  * */
   return (dispatch) => {
     axios.get('./api/home.json').then((res) => {
       const result = res.data.data;
@@ -17,6 +21,10 @@ export const getHomeData = () => {
   }
 };
 export const addMoreList = (page) => {
+  /*
+  * 点击阅读更多，从后台获取更多数据，派发action
+  *
+  * */
   return (dispatch) => {
     axios.get('./api/articleList.json').then((res) => {
       const result = res.data.articleList;
